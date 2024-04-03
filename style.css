@@ -1,0 +1,202 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /* Dette vil bruke Lato Light for all tekst unntatt h1 og h2 */
+    margin: 0;
+    padding: 0;
+    background-color: #FBCEB5; /* Lys støttefarge for hovedbakgrunnen */
+    color: #333; /* Mørk farge for tekst som gir god lesbarhet */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Sørger for vertikal sentrering av innholdet i headeren */
+    justify-content: space-between; /* Fordeler barna (tekst og bilde) på hver sin side */
+    padding: 30px; /* Juster etter behov */
+    color: rgb(0, 0, 0); /* Endre dette etter behov for å passe til bildet */
+    background-color: #FBE7B5; /* Erstattet med en solid bakgrunnsfarge */
+    padding-top: 150px; /* Øker paddingen på toppen */
+    padding-bottom: 200px; /* Øker paddingen på bunnen */
+}
+
+.hero-text {
+    /* Gir fleksibilitet til tekstboksen og tillater den å vokse, men ikke full 1 flex basis */
+    flex: 0 0 20%; 
+    padding: 0px; /* Fjern padding som skyver teksten fra kantene */
+    margin-left: calc(25% - 100px); /* Sentrerer teksten med 25% av vinduet minus halvparten av bildets gap */
+    margin-right: 100px;
+    text-align: left; /* Juster om nødvendig */
+}
+
+.hero-image {
+    flex: 1; /* Gir fleksibilitet til bildeboksen og tillater den å vokse */
+    display: flex; /* Gjør bildecontaineren til en fleksibel boks */
+    justify-content: flex-end; /* Plasserer bildet mot slutten av boksen */
+    overflow: hidden; /* Hindrer bildet i å gå utover containerens grenser */
+}
+
+.hero-image img {
+    max-width: 100%; /* Full bredde */
+    max-height: 100vh; /* Maks høyde som ikke overskrider skjermhøyden */
+    object-fit: contain;
+    object-position: center center; /* Sentrerer bildet */
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat font/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; /* Dekker hele vekt-sprekteret fra Thin til Black */
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Øker størrelsen på fonten for h1 */
+    color: #333; /* Mørk farge for lesbarhet */
+    font-weight: 700; /* Bold vekt */
+    margin: 0 0 0.5rem 0; /* Justerer margen for h1 */
+}
+
+p {
+    font-size: 1.5rem; /* Større fontstørrelse for paragraf */
+    margin: 0 0 2rem 0; /* Justerer margen for paragraf */
+}
+
+#countdown {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Øker størrelsen på fonten for h1 */
+    color: #333; /* Mørk farge for lesbarhet */
+    font-weight: 700; /* Bold vekt */
+    margin: 0 0 0.5rem 0; /* Justerer margen for h1 */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight: 700; /* eller annen ønsket vekt */
+}
+
+h3 {
+    color: #333; /* Står ut mot lysere bakgrunner */
+}
+
+.cta-button {
+    background-color: #FBCEB5; /* Hovedfarge */
+    color: rgb(0, 0, 0); /* Kontrastfarge for tekst */
+}
+
+section {
+    padding: 100px;
+}
+
+#schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#schedule li {
+    background-color: #eee;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #FBCEB5; /* Hovedfarge */
+    color: white; /* Kontrastfarge for tekst */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#leadership {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.leadership-header {
+    text-align: center;
+    padding-bottom: 30px; /* eller ønsket avstand */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 80px ;
+    gap: 50px; /* juster denne avstanden etter behov */
+}
+
+.team-member {
+    width: 200px; /* juster etter størrelsen på bildene */
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%; /* gir bildet en sirkelform */
+    border: 3px solid #333; /* legger til en kant rundt bildet */
+}
+
+.team-member p {
+    margin: 10px 0 0 0; /* fjerner standardmargen og legger til litt plass på toppen */
+    color: #333;
+    font-weight: bold; /* gjør teksten fet */
+}
+
+#creative-section {
+    background-color: #FBCEB5; /* Hovedfarge */
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Om du vil ha avrundede hjørner */
+}
+
+.text-box {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.text-box p {
+    background-color: rgba(0, 0, 0, 0.3); /* Gjennomsiktig svart for å passe med hovedfargen */
+    padding: 20px;
+    border-radius: 5px; /* Om du vil ha avrundede hjørner på teksten */
+}
+
+nav a, .interactive-element:hover {
+    background-color: #FFA96B; /* Kontrastfarge */
+}
+
+.icon, .border, .button {
+    background-color: #FFE0BC; /* Elementfarge */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Eller ønsket høyde */
+    width: 100%; /* Sørger for at containeren fyller tilgjengelig bredde */
+    padding-top: 0; /* Sørger for at det ikke er ekstra plass over bildene */
+}
